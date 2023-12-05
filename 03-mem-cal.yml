@@ -1,8 +1,8 @@
-- name: Print used memory
+- name: Print Used Memory
   hosts: localhost
   tasks:
-    - name: Get memory
-      ansible.builtin.shell: free | grep mem
+    - name: Get Memory
+      ansible.builtin.shell: free | grep Mem
       register: free
     - name: print free Variable
       ansible.builtin.debug:
