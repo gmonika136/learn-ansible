@@ -4,6 +4,7 @@
     - name: Get Memory
       ansible.builtin.shell: free | grep Mem
       register: free
+
     - name: print free Variable
       ansible.builtin.debug:
-        msg: "{{free}}"
+        msg: "{{free.stdout | split(' ') }}"
